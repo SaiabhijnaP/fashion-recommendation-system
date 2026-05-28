@@ -1,0 +1,10 @@
+id,title,category,aesthetic,price,price_tier,tags,link,image_path
+P001,Red and Black top with star detailing,top,y2k,700,budget,Casual,https://www.savana.com/details/fake-2-pcs-pullover-t-shirt-1828852?vid=7&skcPGs=301139-400432,assets/red_black_top.png
+P002,Maxi Dress-Red,dress,old_money,9100,luxury,Formal,https://peppermayo.com/products/chantelle-maxi-dress-red,assets/maxired.png
+P003,Halter Top- Strawberry Stripe,top,streetwear,6300,luxury,Casual,https://peppermayo.com/products/rhydan-halter-top-strawberry-stripe,assets/strawberrystripe.png
+P004,Halter Top- lemon,top,soft_girl,6300,luxury,Casual,https://peppermayo.com/products/fayloria-top-lemon,assets/lemontop.png
+P005,Monogram Tee- White,top,minimalist,4200,affordable,Minimalist,https://peppermayo.com/products/signature-monogram-tee-off-white,assets/monogramwhite.png
+P006,Cutout Tee- Baby Pink,top,zara_larrson,7000,luxury,Coachella,https://peppermayo.com/products/aminata-top-baby-pink,assets/cutoutBabypink.png
+P007,Lehenga Choli-Red&Green,Lehenga,indian_traditional,1275,budget,Traditional,https://www.myntra.com/lehenga-choli/shavidr+enterprise/shavidr-enterprise-block-print-ready-to-wear-lehenga--unstitched-blouse-with-dupatta/41100954/buy,assets/lehengaCholiR&G.png
+P008,Halterneck Kurti- Red,top,indowestern,1350,budget,Indowestern,https://www.nishorama.com/products/ambar-keyhole-halterneck-kurti,assets/halterkurtired.png
+P009,Frill Halter Top- Pink,top,whimsical,7000,luxury,Coachella,https://peppermayo.com/products/inna-frill-halter-top-fuchsia,assets/halterfrillpink.png

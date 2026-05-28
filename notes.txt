@@ -1,0 +1,11 @@
+Day 1:
+- created project structure
+- created products.csv
+- added first 10 products
+Day 2:
+- installed Streamlit
+- loaded products.csv
+- implemented filtering
+- displayed product recommendations
+- fixed image path bugs
+- rendered images successfully

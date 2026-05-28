@@ -1,2 +1,15 @@
-# fashion-recommendation-system
-AI-powered multimodal fashion recommendation system that provides personalized outfit suggestions, aesthetic-based recommendations, shopping links, and AI stylist assistance using recommendation systems, computer vision, and machine learning.
+Fashion Recommendation System
+
+AI-powered multimodal fashion recommendation system using:
+- Streamlit
+- Python
+- Recommendation Systems
+- Computer Vision
+- Graph Neural Networks (planned)
+
+Features:
+- Aesthetic-based recommendations
+- Budget filtering
+- Shopping links
+- Personalised outfit suggestions
+- Makeup and colour palette recommendations

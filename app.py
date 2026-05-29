@@ -1,6 +1,6 @@
-import streamlit as st
-import pandas as pd
-from pathlib import Path
+import streamlit as st # frontend framework for creating titles, buttons, dropdowns, images and ui
+import pandas as pd # reading csv and so that it becomes a dataframe or a table, i.e excel inside python
+from pathlib import Path # working with file paths in a platform-independent way (Windows, macOS, Linux)
 
 # ---------------------------------------------------
 # PAGE CONFIG
@@ -23,6 +23,25 @@ st.caption("AI-powered stylist assistant")
 # ---------------------------------------------------
 
 csv_path = Path("data/products.csv")
+aesthetic_descriptions = {
+    "y2k": "Bold, playful and nostalgic fashion inspired by the early 2000s, featuring bright colors, statement pieces and fun patterns.",
+
+    "old_money": "Classic, elegant and timeless fashion with tailored silhouettes, neutral colors and a sophisticated appearance.",
+
+    "streetwear": "Urban and edgy fashion focused on comfort, oversized fits, graphic pieces and modern youth culture.",
+
+    "soft_girl": "Feminine and delicate fashion featuring pastel colors, cute details, soft fabrics and a gentle aesthetic.",
+
+    "minimalist": "Clean and refined fashion built around simple silhouettes, neutral colors and timeless wardrobe essentials.",
+
+    "zara_larrson": "Confident, trendy and performance-inspired fashion featuring bold colors, statement pieces and pop-star energy.",
+
+    "indian_traditional": "Rich cultural fashion featuring traditional silhouettes, intricate embroidery, vibrant colors and heritage-inspired designs.",
+
+    "indowestern": "A fusion of Indian and Western fashion that combines traditional elements with contemporary styling.",
+
+    "whimsical": "Creative, expressive and playful fashion featuring unique details, vibrant colors and imaginative styling."
+}
 
 if csv_path.exists():
 
@@ -66,13 +85,20 @@ if csv_path.exists():
             (df["aesthetic"] == selected_aesthetic) &
             (df["price_tier"] == selected_price)
         ]
+        st.subheader("👤 Your Style Profile")
+        st.markdown(f"🎨 **Preferred Aesthetic:** {selected_aesthetic}")
+        st.markdown(f"💰 **Budget Tier:** {selected_price}")
+
+        st.subheader(f'About {selected_aesthetic} Aesthetic:')
+        st.write(aesthetic_descriptions[selected_aesthetic])
 
         # ---------------------------------------------------
         # SHOW RECOMMENDATIONS
         # ---------------------------------------------------
-
-        st.subheader("✨ Recommended Products")
-
+        if len(filtered_df) > 1:
+            st.subheader(f'Found {len(filtered_df)} Recommended Products')
+        else:
+            st.subheader(f'Found {len(filtered_df)} Recommended Product')
         if len(filtered_df) > 0:
 
             for _, row in filtered_df.iterrows():
@@ -86,10 +112,6 @@ if csv_path.exists():
                 with col1:
 
                     image_path = Path(row["image_path"])
-
-                    st.write("Path:", image_path)
-                    st.write("Exists:", image_path.exists())
-
                     if image_path.exists():
                         st.image(str(image_path), width=250)
                     else:
@@ -123,3 +145,5 @@ if csv_path.exists():
 
 else:
     st.error("products.csv not found inside data folder.")
+
+
